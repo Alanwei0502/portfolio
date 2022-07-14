@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import ProjectPreview from './project-preview'
-import ProjectShow from './project-show'
+import ProjectPreview from './ProjectPreview'
+import Project from './Project'
 
 const ProjectPage = () => {
   return (
     <Routes>
       <Route index element={<ProjectPreview />} />
-      <Route path=':projectId' element={<ProjectShow />} />
+      <Route path=':projectKey' element={<Project />} />
     </Routes>
   )
 }

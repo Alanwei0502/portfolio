@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/header'
 import HomePage from './routes/home'
-import AboutMePage from './routes/about'
+import AboutPage from './routes/about'
 import ArticlePage from './routes/article'
 import ProjectPage from './routes/project'
 import './App.css'
@@ -16,7 +16,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='project/*' element={<ProjectPage />} />
         <Route path='article' element={<ArticlePage />} />
-        <Route path='about' element={<AboutMePage />} />
+        <Route path='about' element={<AboutPage />} />
       </Routes>
     </div>
   )

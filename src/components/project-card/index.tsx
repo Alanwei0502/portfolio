@@ -1,41 +1,39 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import {
-  Card,
   CardHeader,
   CardMedia,
   CardContent,
-  CardActions,
-  Typography,
-  Button,
-  // IconButton
+  CardActionArea,
 } from '@mui/material'
-import styled from '@emotion/styled'
+import { CardContainer, TypographyEllipsis } from './index.style'
 import { ProjectDetail } from '../../data/project-list/projectList'
 
 interface Props {
   item: [string, ProjectDetail];
 }
 
-const CardContainer = styled(Card)`
-  margin: 1rem 0.5rem;
-`
-
 const ProjectCard = ({ item }: Props) => {
+  const navigate = useNavigate();
+
+  const onClickCard = () => {
+    navigate(item[0]);
+  }
+
   return (
     <CardContainer raised key={item[0]} sx={{ maxWidth: 345 }}>
-      <CardHeader title={item[1].name} />
-      <CardMedia
-        component="img"
-        height="150"
-        image={item[1].image}
-        alt={item[1].name}
-      />
-      <CardContent>
-        <Typography noWrap>{item[1].description}</Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      <CardActionArea onClick={onClickCard}>
+        <CardHeader title={item[1].name} />
+        <CardMedia
+          component="img"
+          height="150"
+          image={item[1].image}
+          alt={item[1].name}
+        />
+        <CardContent>
+          <TypographyEllipsis>{item[1].description}</TypographyEllipsis>
+        </CardContent>
+      </CardActionArea>
     </CardContainer>
   )
 }

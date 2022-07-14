@@ -1,9 +1,12 @@
 import React from 'react'
+import ContentLayout from '../../layout/ContentLayout'
 
-const AboutMePage = () => {
+const AboutPage = () => {
   return (
-    <div>AboutMePage</div>
+    <ContentLayout title={'About Me'}>
+      <div>AboutPage</div>
+    </ContentLayout>
   )
 }
 
-export default AboutMePage
+export default AboutPage
