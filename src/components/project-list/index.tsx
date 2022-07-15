@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material';
 import ContentLayout from '../../layout/ContentLayout';
-import ProjectCard from '../../components/project-card'
+import ProjectCard from '../project-card';
 import projectList from '../../data/project-list/projectList'
 
 /*
@@ -14,7 +14,7 @@ xl:1536
  */
 
 
-const ProjectPreview = () => {
+const ProjectList = () => {
   const list = Object.entries(projectList);
 
   return (
@@ -31,4 +31,4 @@ const ProjectPreview = () => {
   )
 }
 
-export default ProjectPreview
+export default ProjectList

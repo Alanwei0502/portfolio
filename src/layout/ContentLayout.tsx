@@ -8,8 +8,8 @@ interface Props {
 
 const ContentLayout = ({ title, children }: Props) => {
   return (
-    <Container sx={{ mt: 2 }}>
-      <Typography variant="h4">{title}</Typography>
+    <Container sx={{ mt: 8 }}>
+      <Typography variant="h5">{title}</Typography>
       {children}
     </Container>
   )

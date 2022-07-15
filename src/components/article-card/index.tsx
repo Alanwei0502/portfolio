@@ -1,13 +1,13 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 import { ArticleDetail } from '../../data/article-list/articleList'
-import { ArticleContainer } from './Article.style'
+import { ArticleContainer } from './index.style'
 
 interface Props {
   item: ArticleDetail;
 }
 
-const Article = ({ item }: Props) => {
+const ArticleCard = ({ item }: Props) => {
   const date = new Date(item.date).toLocaleDateString();
 
   return (
@@ -18,4 +18,4 @@ const Article = ({ item }: Props) => {
   )
 }
 
-export default Article
+export default ArticleCard

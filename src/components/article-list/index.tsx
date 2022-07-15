@@ -1,6 +1,6 @@
 import React from 'react'
-import { ArticleListContainer } from './ArticleList.style'
-import Article from './Article'
+import { ArticleListContainer } from './index.style'
+import ArticleCard from '../../components/article-card'
 import articleList from '../../data/article-list/articleList'
 
 
@@ -8,7 +8,7 @@ const ArticleList = () => {
   return (
     <ArticleListContainer>
       {articleList.map((item) => (
-        <Article item={item} key={item.id} />
+        <ArticleCard item={item} key={item.id} />
       ))}
     </ArticleListContainer>
   )

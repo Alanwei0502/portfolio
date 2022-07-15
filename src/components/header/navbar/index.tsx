@@ -10,7 +10,7 @@ import {
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
-const pages = ['project', 'article', 'about'];
+const pages = ['Project', 'Article', 'About'];
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -32,12 +32,13 @@ const NavBar = () => {
   return (
     <>
       {/* RWD 900px 以上 */}
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
         {pages.map((page) => (
           <Button
             key={page}
             onClick={onClick(page)}
-            sx={{ my: 2, mr: 2, color: 'white', display: 'block' }}
+            color="inherit"
+            sx={{ my: 2, mr: 2, display: 'block' }}
           >
             {page}
           </Button>
