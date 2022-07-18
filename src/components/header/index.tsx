@@ -6,16 +6,9 @@ import {
   Slide,
   useScrollTrigger,
 } from '@mui/material';
+import { HeaderContainer } from './index.style';
 import Logo from './logo';
 import NavBar from './navbar';
-import styled from '@emotion/styled';
-
-const HeaderContainer = styled(AppBar)`
-  box-shadow: none;
-  position: fixed;
-  background-color: transparent;
-  color: inherit;
-`;
 
 const Header = () => {
   const trigger = useScrollTrigger({ target: window });
