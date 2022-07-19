@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom"
+import useSound from 'use-sound'
 import {
   Box,
   IconButton,
@@ -9,17 +10,21 @@ import {
   Button,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import Brightness4Icon from '@mui/icons-material/Brightness4'
-import Brightness7Icon from '@mui/icons-material/Brightness7'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
 import { useAppDispatch, useAppSelector } from '../../../store/hooks'
 import { selectTheme, toggleTheme } from '../../../store/theme/themeSlice'
+import turnOnLightMode from '../../../assets/sounds/turnOnLightMode.mp3'
+import turnOnDarkMode from '../../../assets/sounds/turnOnDarkMode.mp3'
 
 const pages = ['Project', 'Article', 'About'];
 
 const NavBar = () => {
   const navigate = useNavigate();
   const theme = useAppSelector(selectTheme);
+  const isLightMode = theme === 'light';
   const dispatch = useAppDispatch();
+  const [play] = useSound(isLightMode ? turnOnLightMode : turnOnDarkMode);
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
@@ -36,6 +41,7 @@ const NavBar = () => {
   }
 
   const onToggleTheme = () => {
+    play();
     onCloseNavMenu();
     dispatch(toggleTheme());
   }
@@ -48,7 +54,11 @@ const NavBar = () => {
   return (
     <>
       {/* RWD 900px 以上 */}
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
+      <Box sx={{
+        flexGrow: 1,
+        display: { xs: 'none', md: 'flex' },
+        justifyContent: 'flex-end'
+      }}>
         {pages.map((page) => (
           <Button
             key={page}
@@ -59,8 +69,8 @@ const NavBar = () => {
             {page}
           </Button>
         ))}
-        <IconButton onClick={onToggleTheme} color="inherit">
-          {theme === 'light' ? <Brightness7Icon /> : <Brightness4Icon />}
+        <IconButton onClick={onToggleTheme}>
+          {isLightMode ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
       </Box>
 
@@ -68,7 +78,7 @@ const NavBar = () => {
       <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
         <IconButton
           size="large"
-          aria-label="account of current user"
+          aria-label="open navbar"
           aria-controls="menu-appbar"
           aria-haspopup="true"
           onClick={onOpenNavMenu}
@@ -100,7 +110,7 @@ const NavBar = () => {
             </MenuItem>
           ))}
           <MenuItem onClick={onToggleTheme}>
-            {theme === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            {isLightMode ? <LightModeIcon /> : <DarkModeIcon />}
           </MenuItem>
         </Menu>
       </Box>

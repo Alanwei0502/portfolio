@@ -1,31 +1,35 @@
 import { ThemeOptions } from '@mui/material'
 
-const color1 = '#E7E7E4';
-const color2 = '#E2DDD5';
-const color3 = '#AB9E95';
-const color4 = '#6E615A';
-const color5 = '#585858';
-const color6 = '#191919';
+export const white = '#EAEAEA';
+export const black = '#1A1A1A';
+export const grey1 = '#E8E9F1';
+export const grey2 = '#CFD0DB';
+export const pink1 = '#FAE5DF';
+export const pink2 = '#F5CAC2';
+export const orangeRed = '#E34A33';
+export const blue = '#303179';
+export const darkBlue = '#141850';
+
 
 export const lightMode: ThemeOptions = {
   palette: {
     mode: 'light',
     common: {
-      black: color6,
-      white: color1
+      black,
+      white
     },
     primary: {
-      main: color4,
-      light: color2,
-      dark: color6,
-      contrastText: color1,
+      main: black,
+      // light: pink1,
+      // dark: blue,
+      // contrastText: darkBlue,
     },
     background: {
-      paper: color2,
-      default: color1
+      paper: white,
+      default: grey2
     },
     text: {
-      primary: color6
+      primary: black
     }
   }
 }
@@ -34,21 +38,21 @@ export const darkMode: ThemeOptions = {
   palette: {
     mode: 'dark',
     common: {
-      black: color6,
-      white: color1
+      black,
+      white
     },
     primary: {
-      main: color3,
-      light: color1,
-      dark: color5,
-      contrastText: color6,
+      main: pink2,
+      // light: pink1,
+      // dark: orangeRed,
+      // contrastText: pink2,
     },
     background: {
-      paper: color5,
-      default: color6
+      paper: darkBlue,
+      default: black
     },
     text: {
-      primary: color1
+      primary: white
     }
   }
 }

@@ -21,7 +21,7 @@ const ProjectCard = ({ item }: Props) => {
   }
 
   return (
-    <CardContainer raised key={item[0]} sx={{ maxWidth: 345 }}>
+    <CardContainer raised key={item[0]}>
       <CardActionArea onClick={onClickCard}>
         <CardHeader title={item[1].name} />
         <CardMedia

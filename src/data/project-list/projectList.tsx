@@ -2,13 +2,17 @@ import ToDoList from '../../routes/project/to-do-list'
 import WeatherApp from '../../routes/project/weather-app'
 import MaskMap from '../../routes/project/mask-map'
 import BillingApp from '../../routes/project/billing-app'
+import ECommerce from '../../routes/project/e-commerce'
+import FileConverter from '../../routes/project/file-converter'
 
 import toDoListImage from '../../assets/images/toDoList.jpg'
 import weatherImage from '../../assets/images/weather.jpg'
 import maskMapImage from '../../assets/images/maskMap.jpg'
 import billingImage from '../../assets/images/billing.jpg'
 import eCommerceImage from '../../assets/images/eCommerce.jpg'
-import ECommerce from '../../routes/project/e-commerce'
+import fileConverterImage from '../../assets/images/fileConverter.jpg'
+
+
 
 export type ProjectDetail = {
   id: number;
@@ -53,6 +57,13 @@ const projectList: { [key: string]: ProjectDetail } = {
     component: <ECommerce />,
     image: eCommerceImage,
     description: `An online clothing ecommerce store with shopping cart and checkout function.`,
+  },
+  fileConverter: {
+    id: 6,
+    name: 'Drag!Drop!Convert!',
+    component: <FileConverter />,
+    image: fileConverterImage,
+    description: `Easy tool to convert files online. Drag and drop your file into the toolbox to begin converting your file.`,
   }
 };
 
