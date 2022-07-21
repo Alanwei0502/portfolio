@@ -1,15 +1,13 @@
 import React from 'react'
-import { Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 
 interface Props {
-  title: string;
   children: JSX.Element;
 }
 
-const ContentLayout = ({ title, children }: Props) => {
+const ContentLayout = ({ children }: Props) => {
   return (
-    <Container sx={{ mt: 8 }}>
-      <Typography variant="h5">{title}</Typography>
+    <Container sx={{ mt: 10 }}>
       {children}
     </Container>
   )

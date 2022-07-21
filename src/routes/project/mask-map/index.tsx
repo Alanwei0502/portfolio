@@ -5,7 +5,7 @@ import projectList from '../../../data/project-list/projectList'
 const MaskMap = () => {
   const { maskMap } = projectList
   return (
-    <ContentLayout title={maskMap.name}>
+    <ContentLayout>
       <div>{maskMap.description}</div>
     </ContentLayout>
   )

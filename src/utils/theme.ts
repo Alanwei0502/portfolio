@@ -19,13 +19,9 @@ export const lightMode: ThemeOptions = {
       white
     },
     primary: {
-      main: black,
-      // light: pink1,
-      // dark: blue,
-      // contrastText: darkBlue,
+      main: blue,
     },
     background: {
-      paper: white,
       default: grey2
     },
     text: {
@@ -43,12 +39,8 @@ export const darkMode: ThemeOptions = {
     },
     primary: {
       main: pink2,
-      // light: pink1,
-      // dark: orangeRed,
-      // contrastText: pink2,
     },
     background: {
-      paper: darkBlue,
       default: black
     },
     text: {

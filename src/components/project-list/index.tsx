@@ -8,7 +8,7 @@ const ProjectList = () => {
   const list = Object.entries(projectList);
 
   return (
-    <ContentLayout title='Projects'>
+    <ContentLayout>
       <Grid container spacing={2}>
         {list.map((item) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={item[0]}>

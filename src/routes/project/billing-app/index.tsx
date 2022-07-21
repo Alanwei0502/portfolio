@@ -6,7 +6,7 @@ import projectList from '../../../data/project-list/projectList'
 const BillingApp = () => {
   const { billingApp } = projectList
   return (
-    <ContentLayout title={billingApp.name}>
+    <ContentLayout>
       <div>{billingApp.description}</div>
     </ContentLayout>
   )

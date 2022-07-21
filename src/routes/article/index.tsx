@@ -5,7 +5,7 @@ import ContentLayout from '../../layout/ContentLayout'
 
 const ArticlePage = () => {
   return (
-    <ContentLayout title='Aritcles'>
+    <ContentLayout>
       <>
         <SearchField />
         <ArticleList />

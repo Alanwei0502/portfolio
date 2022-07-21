@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import {
   Box
 } from '@mui/material'
-import { orangeRed } from '../../../utils/theme'
+import { orangeRed, blue } from '../../../utils/theme'
 
 
 export const HelloContainer = styled(Box)`
@@ -22,7 +22,7 @@ export const HelloContainer = styled(Box)`
   }
 `
 
-export const Name = styled.span`
-  font-weight: 900;
-  color: ${orangeRed}
+export const ActionButtonContainer = styled(Box)`
+  margin-top: 3rem;
+  text-align: center;
 `

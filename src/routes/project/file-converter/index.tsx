@@ -5,7 +5,7 @@ import projectList from '../../../data/project-list/projectList'
 const FileConverter = () => {
   const { fileConverter } = projectList
   return (
-    <ContentLayout title={fileConverter.name}>
+    <ContentLayout>
       <div>{fileConverter.description}</div>
     </ContentLayout>
   )

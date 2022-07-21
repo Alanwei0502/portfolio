@@ -6,7 +6,7 @@ const WeatherApp = () => {
   const { weatherApp } = projectList
 
   return (
-    <ContentLayout title={weatherApp.name}>
+    <ContentLayout>
       <div>{weatherApp.description}</div>
     </ContentLayout>
   )

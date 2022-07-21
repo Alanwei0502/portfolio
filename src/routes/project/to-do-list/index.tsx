@@ -6,7 +6,7 @@ const ToDoList = () => {
   const { toDoList } = projectList
 
   return (
-    <ContentLayout title={toDoList.name}>
+    <ContentLayout>
       <div>{toDoList.description}</div>
     </ContentLayout>
   )
